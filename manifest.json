@@ -1,0 +1,47 @@
+{
+  "name": "Skitour",
+  "version": "1.0",
+  "author": "Alessio Sclocco",
+  "description": "Skitouring",
+  "type": "feature",
+  "usage": "workout",
+  "modificationTime": 1677955660,
+  "in": [
+    {
+      "name": "altitude",
+      "source": "Fusion/Altitude",
+      "type": "subscribe"
+    },
+    {
+      "name": "ascent",
+      "source": "Fusion/Altitude/Ascent",
+      "type": "subscribe"
+    },
+    {
+      "name": "eta",
+      "source": "Navigation/Routes/NavigatedRoute/ETA",
+      "type": "subscribe"
+    },
+    {
+      "name": "trend",
+      "source": "Fusion/Altitude/PressureTrend",
+      "type": "subscribe"
+    }
+  ],
+  "out": [
+    {
+      "name": "climbs"
+    },
+    {
+      "name": "descents"
+    },
+    {
+      "name": "arrow"
+    }
+  ],
+  "template": [
+    {
+      "name": "t.html"
+    }
+  ]
+}

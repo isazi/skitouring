@@ -1,0 +1,102 @@
+<!-- SuuntoPlus: Template with 5 fields and value icons -->
+<uiView>
+
+  <!-- Exercise viewset (vs) subview -->
+  <div id="suuntoplus">
+
+    <!-- logo/title and its bg -->
+    <div class="cm-fg" style="width:100%;height:25%">
+      <div class="sp-t-m p-hc" style="top:calc(60% - 50%e)">
+        SKITOUR
+      </div>
+    </div>
+
+    <!-- vertical separator -->
+    <div class="cm-fg p-hc" style="top:32%;width:2px;height:43%;opacity:0.4"></div>
+
+    <!-- Note!
+      On large display icons are on the top of the value
+      and on medium and small displays icons are on the left or right of the value
+      in this layout
+    -->
+
+    <!-- top left -->
+<:if test="{APP_IS_DISPLAY_LARGE}">
+    <div class="f-ico" style="top:calc(35% - 100%e);left:calc(26% - 50%e)">&#xF144;</div>
+    <div class="sp-d-m f-num" style="top:calc(41% - 50%e);left:calc(26% - 50%e)">
+      <eval input="{zapp_tl_input}" outputFormat="{zapp_tl_format}" default="--" />
+    </div>
+</:if>
+<:else>
+    <div style="top:26%;left:3%;width:46%;height:30%">
+      <div class="sp-d-s p-hc sp-vc">
+        <span class="f-ico" style="padding-right:4px">&#xF144;</span>
+        <span class="f-num">
+          <eval input="{zapp_tl_input}" outputFormat="{zapp_tl_format}" default="--" />
+        </span>
+      </div>
+    </div>
+</:else>
+
+    <!-- top right -->
+<:if test="{APP_IS_DISPLAY_LARGE}">    
+    <div class="f-ico" style="top:calc(35% - 100%e);left:calc(74% - 50%e)">&#xF263;</div>
+    <div class="sp-d-m f-num" style="top:calc(41% - 50%e);left:calc(74% - 50%e)">
+      <eval input="{zapp_tr_input}" outputFormat="{zapp_tr_format}" default="--" />
+    </div>
+</:if>
+<:else>
+    <div style="top:26%;left:51%;width:46%;height:30%">
+      <div class="p-hc sp-vc">
+        <span class="sp-d-s f-num">
+          <eval input="{zapp_tr_input}" outputFormat="{zapp_tr_format}" default="--" />
+        </span>
+        <span class="f-ico" style="padding-left:4px">&#xF263;</span>
+      </div>
+    </div>   
+</:else>
+
+    <!-- middle left -->
+<:if test="{APP_IS_DISPLAY_LARGE}">    
+    <div class="f-ico" style="top:calc(60% - 100%e);left:calc(26% - 50%e)">ETA</div>
+    <div class="sp-d-s f-num" style="top:calc(66% - 50%e);left:calc(26% - 50%e)">
+      <eval input="{zapp_ml_input}" outputFormat="{zapp_ml_format}" default="--" />
+    </div>
+</:if>
+<:else>
+    <div style="top:48%;left:5%;width:43%;height:30%">
+      <div class="p-hc sp-vc">
+        <span class="f-ico" style="padding-right:4px">&#xF101;</span>
+        <span class="sp-d-s f-num">
+          <eval input="{zapp_ml_input}" outputFormat="{zapp_ml_format}" default="--" />
+        </span>
+      </div>
+    </div>
+</:else>
+
+    <!-- middle right -->
+<:if test="{APP_IS_DISPLAY_LARGE}">    
+    <div class="f-ico" style="top:calc(60% - 100%e);left:calc(74% - 50%e)">INC</div>
+    <div class="sp-d-s f-num" style="top:calc(66% - 50%e);left:calc(74% - 50%e)">
+      <eval input="{zapp_mr_input}" outputFormat="{zapp_mr_format}" default="--" />
+    </div>
+</:if>
+<:else>
+    <div style="top:48%;left:51%;width:48%;height:30%">
+      <div class="p-hc sp-vc">
+        <span class="sp-d-s f-num">
+          <eval input="{zapp_mr_input}" outputFormat="{zapp_mr_format}" default="--" />
+        </span>
+        <span class="f-ico" style="padding-left:4px">&#xF102;</span>
+      </div>
+    </div>
+</:else>
+
+    <!-- bottom middle -->
+    <div class="f-ico-l" style="top:calc(86% - 50%e); left:calc(50% - 50%e)">
+      <eval input="{zapp_bottom_input}" outputFormat="{zapp_bottom_format}" default="&#xF284;" />
+    </div>
+
+  </div>
+
+</uiView>
