@@ -58,7 +58,7 @@
 
     <!-- middle left -->
 <:if test="{APP_IS_DISPLAY_LARGE}">    
-    <div class="f-ico" style="top:calc(60% - 100%e);left:calc(26% - 50%e)">ETA</div>
+    <div class="sp-t-m" style="top:calc(60% - 100%e);left:calc(26% - 50%e)">ETA</div>
     <div class="sp-d-s f-num" style="top:calc(66% - 50%e);left:calc(26% - 50%e)">
       <eval input="{zapp_ml_input}" outputFormat="{zapp_ml_format}" default="--" />
     </div>
@@ -66,7 +66,7 @@
 <:else>
     <div style="top:48%;left:5%;width:43%;height:30%">
       <div class="p-hc sp-vc">
-        <span class="f-ico" style="padding-right:4px">&#xF101;</span>
+        <span class="sp-t-m" style="padding-right:4px">ETA</span>
         <span class="sp-d-s f-num">
           <eval input="{zapp_ml_input}" outputFormat="{zapp_ml_format}" default="--" />
         </span>
@@ -76,7 +76,7 @@
 
     <!-- middle right -->
 <:if test="{APP_IS_DISPLAY_LARGE}">    
-    <div class="f-ico" style="top:calc(60% - 100%e);left:calc(74% - 50%e)">INC</div>
+    <div class="sp-t-m" style="top:calc(60% - 100%e);left:calc(74% - 50%e)">Deg</div>
     <div class="sp-d-s f-num" style="top:calc(66% - 50%e);left:calc(74% - 50%e)">
       <eval input="{zapp_mr_input}" outputFormat="{zapp_mr_format}" default="--" />
     </div>
@@ -87,7 +87,7 @@
         <span class="sp-d-s f-num">
           <eval input="{zapp_mr_input}" outputFormat="{zapp_mr_format}" default="--" />
         </span>
-        <span class="f-ico" style="padding-left:4px">&#xF102;</span>
+        <span class="sp-t-m" style="padding-left:4px">Deg</span>
       </div>
     </div>
 </:else>
