@@ -83,6 +83,7 @@ function evaluate(input, output) {
 }
 
 function onLoad(input, output) {
+  isPaused = true;
   output.climbs = 0;
   output.descents = 0;
   referenceAltitude = input.altitude;
@@ -118,7 +119,7 @@ function getUserInterface() {
     tr: { input: 'Fusion/Altitude/Ascent', format: 'Ascent_Fivedigits' },
     ml: { input: 'Navigation/Routes/NavigatedRoute/ETA', format: 'Duration_Approximate' },
     mr: { input: '', format: '' },
-    bottom: { input: '', format: '' }
+    bottom: { input: 'Output/arrow' }
   };
 }
 
