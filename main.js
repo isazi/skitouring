@@ -112,6 +112,22 @@ function onLap()
   slopeMode = !slopeMode;
 }
 
+function onAccelerometer(input, output) {
+  if ( !slopeMode ) {
+    return;
+  }
+
+  var x = -999;
+  var y = -999;
+  var z = -999;
+  for ( var i = 0; i < input.accelerometer.x.length; i++ ) {
+    x = Math.max(x, input.accelerometer.x[i]);
+    y = Math.max(y, input.accelerometer.y[i]);
+    z = Math.max(z, input.accelerometer.z[i]);
+  }
+  output.angle = Math.atan(y / Math.sqrt(Math.pow(x, 2) + Math.pow(z, 2)));
+}
+
 function getUserInterface() {
   return {
     template: 't',

@@ -44,13 +44,7 @@
       "name": "arrow"
     },
     {
-      "name": "acc_x"
-    },
-    {
-      "name": "acc_y"
-    },
-    {
-      "name": "acc_z"
+      "name": "angle"
     }
   ],
   "template": [
