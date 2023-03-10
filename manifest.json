@@ -26,6 +26,11 @@
       "name": "trend",
       "source": "Fusion/Altitude/PressureTrend",
       "type": "subscribe"
+    },
+    {
+      "name": "accelerometer",
+      "source": "Fusion/Zapp/Accelerometer",
+      "type": "subscribe"
     }
   ],
   "out": [
@@ -37,6 +42,15 @@
     },
     {
       "name": "arrow"
+    },
+    {
+      "name": "acc_x"
+    },
+    {
+      "name": "acc_y"
+    },
+    {
+      "name": "acc_z"
     }
   ],
   "template": [
