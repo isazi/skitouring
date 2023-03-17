@@ -53,32 +53,8 @@ function evaluate(input, output) {
   }
 
   // Pressure trend
-  if ( input.trend == 1 ) {
-    output.arrow = "&#xF280;"
-  }
-  else if ( input.trend == 2 ) {
-    output.arrow = "&#xF281;"
-  }
-  else if ( input.trend == 3 ) {
-    output.arrow = "&#xF282;"
-  }
-  else if ( input.trend == 4 ) {
-    output.arrow = "&#xF283;"
-  }
-  else if ( input.trend == 5 ) {
-    output.arrow = "&#xF284;"
-  }
-  else if ( input.trend == 6 ) {
-    output.arrow = "&#xF285;"
-  }
-  else if ( input.trend == 7 ) {
-    output.arrow = "&#xF286;"
-  }
-  else if ( input.trend == 8 ) {
-    output.arrow = "&#xF287;"
-  }
-  else if ( input.trend == 9 ) {
-    output.arrow = "&#xF288;"
+  if ( input.trend >= 1 && input.trend <= 9 ) {
+    output.arrow = 279 + input.trend;
   }
 }
 
@@ -134,7 +110,7 @@ function getUserInterface() {
     tl: { input: 'Fusion/Altitude', format: 'Altitude_Fourdigits' },
     tr: { input: 'Fusion/Altitude/Ascent', format: 'Ascent_Fivedigits' },
     ml: { input: 'Navigation/Routes/NavigatedRoute/ETA', format: 'Duration_Approximate' },
-    mr: { input: '', format: '' },
+    mr: { input: 'Output/angle' },
     bottom: { input: 'Output/arrow' }
   };
 }
