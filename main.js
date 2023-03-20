@@ -51,11 +51,6 @@ function evaluate(input, output) {
       referenceAltitude = currentAltitude;
     }
   }
-
-  // Pressure trend
-  if ( input.trend >= 1 && input.trend <= 9 ) {
-    output.arrow = 279 + input.trend;
-  }
 }
 
 function onLoad(input, output) {
@@ -111,7 +106,7 @@ function getUserInterface() {
     tr: { input: 'Fusion/Altitude/Ascent', format: 'Ascent_Fivedigits' },
     ml: { input: 'Navigation/Routes/NavigatedRoute/ETA', format: 'Duration_Approximate' },
     mr: { input: 'Output/angle' },
-    bottom: { input: 'Output/arrow' }
+    bottom: { input: 'Fusion/Altitude/PressureTrend' }
   };
 }
 
