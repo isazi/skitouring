@@ -105,7 +105,7 @@ function getUserInterface() {
     tl: { input: 'Fusion/Altitude', format: 'Altitude_Fourdigits' },
     tr: { input: 'Fusion/Altitude/Ascent', format: 'Ascent_Fivedigits' },
     ml: { input: 'Navigation/Routes/NavigatedRoute/ETA', format: 'Duration_Approximate' },
-    mr: { input: 'Output/angle' },
+    mr: { input: 'output/angle' },
     bottom: { input: 'Fusion/Altitude/PressureTrend' }
   };
 }
