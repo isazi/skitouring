@@ -18,8 +18,18 @@
       "type": "subscribe"
     },
     {
-      "name": "eta",
-      "source": "Navigation/Routes/NavigatedRoute/ETA",
+      "name": "remaining_ascent",
+      "source": "Navigation/Routes/NavigatedRoute/RemainAscent",
+      "type": "subscribe"
+    },
+    {
+      "name": "remaining_descent",
+      "source": "Navigation/Routes/NavigatedRoute/RemainDescent",
+      "type": "subscribe"
+    },
+    {
+      "name": "remaining_distance",
+      "source": "Navigation/Routes/NavigatedRoute/DistanceToDestination",
       "type": "subscribe"
     },
     {
@@ -42,6 +52,9 @@
     },
     {
       "name": "angle"
+    },
+    {
+      "name": "ete"
     }
   ],
   "template": [

@@ -51,6 +51,11 @@ function evaluate(input, output) {
       referenceAltitude = currentAltitude;
     }
   }
+
+  // Estimated time on route in hours
+  output.ete = (input.remaining_distance / 5000) + (input.remaining_ascent / 300) + (input.remaining_descent / 1000);
+  // Conversion to seconds
+  output.ete *= 3600;
 }
 
 function onLoad(input, output) {
@@ -104,7 +109,7 @@ function getUserInterface() {
     template: 't',
     tl: { input: 'Fusion/Altitude', format: 'Altitude_Fourdigits' },
     tr: { input: 'Fusion/Altitude/Ascent', format: 'Ascent_Fivedigits' },
-    ml: { input: 'Navigation/Routes/NavigatedRoute/ETA', format: 'Duration_Approximate' },
+    ml: { input: 'output/ete', format: 'Duration_Approximate' },
     mr: { input: 'output/angle', format: 'Declination_Fourdigits' },
     bottom: { input: 'Fusion/Altitude/PressureTrend' }
   };
