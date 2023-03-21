@@ -78,14 +78,14 @@
 <:if test="{APP_IS_DISPLAY_LARGE}">    
     <div class="sp-t-m" style="top:calc(60% - 100%e);left:calc(74% - 50%e)">Deg</div>
     <div class="sp-d-s f-num" style="top:calc(66% - 50%e);left:calc(74% - 50%e)">
-      <eval input="{zapp_mr_input}" outputFormat="auto" default="--" />
+      <eval input="{zapp_mr_input}" outputFormat="{zapp_mr_format}" default="--" />
     </div>
 </:if>
 <:else>
     <div style="top:48%;left:51%;width:48%;height:30%">
       <div class="p-hc sp-vc">
         <span class="sp-d-s f-num">
-          <eval input="{zapp_mr_input}" outputFormat="auto" default="--" />
+          <eval input="{zapp_mr_input}" outputFormat="{zapp_mr_format}" default="--" />
         </span>
         <span class="sp-t-m" style="padding-left:4px">Deg</span>
       </div>
