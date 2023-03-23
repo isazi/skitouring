@@ -1,9 +1,14 @@
 <!-- SuuntoPlus: Template with 5 fields and value icons -->
 <uiView>
-
+  
   <!-- Exercise viewset (vs) subview -->
   <div id="suuntoplus">
 
+    <!-- Change lap type -->
+    <userInput>
+      <pushButton name="down" longType="lock" onClick="$.put('Activity/Trigger', 24);" onLongPressStart="open('ex-timelock');" />
+    </userInput>
+    
     <!-- logo/title and its bg -->
     <div class="cm-fg" style="width:100%;height:25%">
       <div class="sp-t-m p-hc" style="top:calc(60% - 50%e)">
@@ -94,7 +99,7 @@
 
     <!-- bottom middle -->
     <div class="f-ico-l" style="top:calc(86% - 50%e); left:calc(50% - 50%e)">
-      <eval input="{zapp_bottom_input}" outputFormat="keyValue0=--|1=&#xF280;|2=&#xF281;|3=&#xF282;|4=&#xF283;|5=&#xF284;|6=&#xF285;|7=&#xF286;|8=&#xF287;|9=&#xF288;" />
+      <eval input="{zapp_bottom_input}" outputFormat="keyValue 1=&#xF280;|2=&#xF281;|3=&#xF282;|4=&#xF283;|5=&#xF284;|6=&#xF285;|7=&#xF286;|8=&#xF287;|9=&#xF288;" />
     </div>
 
   </div>
