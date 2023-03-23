@@ -101,7 +101,7 @@ function onAccelerometer(input, output) {
     y = Math.max(y, input.accelerometer.y[i]);
     z = Math.max(z, input.accelerometer.z[i]);
   }
-  output.angle = Math.atan(y / Math.sqrt(Math.pow(x, 2) + Math.pow(z, 2)));
+  output.angle = Math.atan(x / Math.sqrt(Math.pow(y, 2) + Math.pow(z, 2)));
 }
 
 function getUserInterface() {
