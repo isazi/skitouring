@@ -7,59 +7,23 @@
   "usage": "workout",
   "modificationTime": 1677955660,
   "in": [
-    {
-      "name": "altitude",
-      "source": "Fusion/Altitude",
-      "type": "subscribe"
-    },
-    {
-      "name": "ascent",
-      "source": "Fusion/Altitude/Ascent",
-      "type": "subscribe"
-    },
-    {
-      "name": "remaining_ascent",
-      "source": "Navigation/Routes/NavigatedRoute/RemainAscent",
-      "type": "subscribe"
-    },
-    {
-      "name": "remaining_descent",
-      "source": "Navigation/Routes/NavigatedRoute/RemainDescent",
-      "type": "subscribe"
-    },
+    { "name": "altitude", "source": "Fusion/Altitude", "type": "subscribe" },
+    { "name": "ascent", "source": "Fusion/Altitude/Ascent", "type": "subscribe" },
+    { "name": "remaining_ascent", "source": "Navigation/Routes/NavigatedRoute/RemainAscent", "type": "subscribe" },
+    { "name": "remaining_descent", "source": "Navigation/Routes/NavigatedRoute/RemainDescent", "type": "subscribe" },
     {
       "name": "remaining_distance",
       "source": "Navigation/Routes/NavigatedRoute/DistanceToDestination",
       "type": "subscribe"
     },
-    {
-      "name": "trend",
-      "source": "Fusion/Altitude/PressureTrend",
-      "type": "subscribe"
-    },
-    {
-      "name": "accelerometer",
-      "source": "Fusion/Zapp/Accelerometer",
-      "type": "subscribe"
-    }
+    { "name": "trend", "source": "Fusion/Altitude/PressureTrend", "type": "subscribe" },
+    { "name": "accelerometer", "source": "Fusion/Zapp/Accelerometer", "type": "subscribe" }
   ],
   "out": [
-    {
-      "name": "climbs"
-    },
-    {
-      "name": "descents"
-    },
-    {
-      "name": "angle"
-    },
-    {
-      "name": "ete"
-    }
+    { "name": "climbs", "log": true },
+    { "name": "descents", "log": true },
+    { "name": "angle" },
+    { "name": "ete" }
   ],
-  "template": [
-    {
-      "name": "t.html"
-    }
-  ]
+  "template": [{ "name": "t.html" }]
 }
