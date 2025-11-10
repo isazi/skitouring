@@ -9,15 +9,18 @@
   "in": [
     { "name": "altitude", "source": "Fusion/Altitude", "type": "subscribe" },
     { "name": "ascent", "source": "Fusion/Altitude/Ascent", "type": "subscribe" },
-    { "name": "remaining_ascent", "source": "Navigation/Routes/NavigatedRoute/RemainAscent", "type": "subscribe" },
-    { "name": "remaining_descent", "source": "Navigation/Routes/NavigatedRoute/RemainDescent", "type": "subscribe" },
+    { "name": "descent", "source": "Fusion/Altitude/Descent", "type": "subscribe" },
+    { "name": "distance", "source": "Activity/Current/Distance", "type": "subscribe" },
+    { "name": "nav_remaining_ascent", "source": "Navigation/Routes/NavigatedRoute/RemainAscent", "type": "subscribe" },
+    { "name": "nav_remaining_descent", "source": "Navigation/Routes/NavigatedRoute/RemainDescent", "type": "subscribe" },
     {
-      "name": "remaining_distance",
+      "name": "nav_remaining_distance",
       "source": "Navigation/Routes/NavigatedRoute/DistanceToDestination",
       "type": "subscribe"
     },
     { "name": "trend", "source": "Fusion/Altitude/PressureTrend", "type": "subscribe" },
-    { "name": "accelerometer", "source": "Fusion/Zapp/Accelerometer", "type": "subscribe" }
+    { "name": "accelerometer", "source": "Fusion/Zapp/Accelerometer", "type": "subscribe" },
+    { "name": "navigation", "source": "Navigation/State", "type": "subscribe" }
   ],
   "out": [
     { "name": "climbs", "log": true },
@@ -25,5 +28,25 @@
     { "name": "angle" },
     { "name": "ete" }
   ],
-  "template": [{ "name": "t.html" }]
+  "template": [{ "name": "t.html" }],
+  "settings": [
+    {
+      "shownName": "Planned distance (in meters)",
+      "path": "planned_distance",
+      "type": "float",
+      "min": 0
+    },
+    {
+      "shownName": "Planned ascent (in meters)",
+      "path": "planned_ascent",
+      "type": "float",
+      "min": 0
+    },
+    {
+      "shownName": "Planned descent (in meters)",
+      "path": "planned_descent",
+      "type": "float",
+      "min": 0
+    }
+  ]
 }

@@ -51,9 +51,23 @@ function evaluate(input, output) {
       referenceAltitude = currentAltitude;
     }
   }
+  // Select remaining distance, ascent, and descent from correct source
+  var remaining_distance;
+  var remaining_ascent;
+  var remaining_descent;
+  if ( input.navigation == 3 || input.navigation == 7) {
+    remaining_distance = input.nav_remaining_distance;
+    remaining_ascent = input.nav_remaining_ascent;
+    remaining_descent = input.nav_remaining_descent;
+  }
+  else {
+    remaining_distance = Number(localStorage.getItem("planned_distance")) - input.distance;
+    remaining_ascent = Number(localStorage.getItem("planned_ascent")) - input.ascent;
+    remaining_descent = Number(localStorage.getItem("planned_descent")) - input.descent;
+  }
 
   // Estimated time on route in hours
-  output.ete = (input.remaining_distance / 5000) + (input.remaining_ascent / 300) + (input.remaining_descent / 1000);
+  output.ete = (remaining_distance / 5000) + (remaining_ascent / 300) + (remaining_descent / 1000);
   // Conversion to seconds
   output.ete *= 3600;
 }
